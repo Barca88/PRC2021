@@ -1,0 +1,1555 @@
+@prefix : <http://www.di.uminho.pt/prc2021/uc-inf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.di.uminho.pt/prc2021/uc-inf> .
+
+<http://www.di.uminho.pt/prc2021/uc-inf> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#anoLetivo
+<http://www.semanticweb.org/owl/owlapi/turtle#anoLetivo> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#designação
+<http://www.semanticweb.org/owl/owlapi/turtle#designação> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#ensina
+<http://www.semanticweb.org/owl/owlapi/turtle#ensina> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#frequenta
+<http://www.semanticweb.org/owl/owlapi/turtle#frequenta> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#nome
+<http://www.semanticweb.org/owl/owlapi/turtle#nome> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.di.uminho.pt/prc2021/uc#ensina
+<http://www.di.uminho.pt/prc2021/uc#ensina> rdf:type owl:ObjectProperty ;
+                                            owl:inverseOf <http://www.di.uminho.pt/prc2021/uc#éEnsinadaPor> ;
+                                            rdfs:domain <http://www.semanticweb.org/owl/owlapi/turtle#Professor> ;
+                                            rdfs:range <http://www.semanticweb.org/owl/owlapi/turtle#UnidadeCurricular> .
+
+
+###  http://www.di.uminho.pt/prc2021/uc#frequenta
+<http://www.di.uminho.pt/prc2021/uc#frequenta> rdf:type owl:ObjectProperty ;
+                                               owl:inverseOf <http://www.di.uminho.pt/prc2021/uc#éFrequentadaPor> ;
+                                               rdfs:domain <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                               rdfs:range <http://www.semanticweb.org/owl/owlapi/turtle#UnidadeCurricular> .
+
+
+###  http://www.di.uminho.pt/prc2021/uc#éEnsinadaPor
+<http://www.di.uminho.pt/prc2021/uc#éEnsinadaPor> rdf:type owl:ObjectProperty ;
+                                                  rdfs:domain <http://www.semanticweb.org/owl/owlapi/turtle#UnidadeCurricular> ;
+                                                  rdfs:range <http://www.semanticweb.org/owl/owlapi/turtle#Professor> .
+
+
+###  http://www.di.uminho.pt/prc2021/uc#éFrequentadaPor
+<http://www.di.uminho.pt/prc2021/uc#éFrequentadaPor> rdf:type owl:ObjectProperty ;
+                                                     rdfs:domain <http://www.semanticweb.org/owl/owlapi/turtle#UnidadeCurricular> ;
+                                                     rdfs:range <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#Aluno
+<http://www.semanticweb.org/owl/owlapi/turtle#Aluno> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#Professor
+<http://www.semanticweb.org/owl/owlapi/turtle#Professor> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#UnidadeCurricular
+<http://www.semanticweb.org/owl/owlapi/turtle#UnidadeCurricular> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#AER
+<http://www.semanticweb.org/owl/owlapi/turtle#AER> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#UnidadeCurricular> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#anoLetivo> "2020/2021" ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#designação> "Arquiteturas Emergentes de Rede" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#PRC
+<http://www.semanticweb.org/owl/owlapi/turtle#PRC> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#UnidadeCurricular> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#anoLetivo> "2020/2021" ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#designação> "Processamento e Representação de Conhecimento" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#SPLN
+<http://www.semanticweb.org/owl/owlapi/turtle#SPLN> rdf:type owl:NamedIndividual ,
+                                                             <http://www.semanticweb.org/owl/owlapi/turtle#UnidadeCurricular> ;
+                                                    <http://www.semanticweb.org/owl/owlapi/turtle#anoLetivo> "2020/2021" ;
+                                                    <http://www.semanticweb.org/owl/owlapi/turtle#designação> "Scripting no Processamento de Linguagem Natural" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#VR
+<http://www.semanticweb.org/owl/owlapi/turtle#VR> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#UnidadeCurricular> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#anoLetivo> "2020/2021" ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#designação> "Virtualização de Redes" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#ac
+<http://www.semanticweb.org/owl/owlapi/turtle#ac> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Professor> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#ensina> <http://www.semanticweb.org/owl/owlapi/turtle#AER> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "António Costa" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#jcr
+<http://www.semanticweb.org/owl/owlapi/turtle#jcr> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Professor> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#ensina> <http://www.semanticweb.org/owl/owlapi/turtle#PRC> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "José Carlos Ramalho" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#jfp
+<http://www.semanticweb.org/owl/owlapi/turtle#jfp> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Professor> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#ensina> <http://www.semanticweb.org/owl/owlapi/turtle#VR> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "João Fernandes Pereira " .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#jj
+<http://www.semanticweb.org/owl/owlapi/turtle#jj> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Professor> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#ensina> <http://www.semanticweb.org/owl/owlapi/turtle#SPLN> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "José João" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#1
+<http://www.semanticweb.org/owl/owlapi/turtle#1> rdf:type owl:NamedIndividual ,
+                                                          <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                 <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#VR> ;
+                                                 <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Stone May" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#10
+<http://www.semanticweb.org/owl/owlapi/turtle#10> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#VR> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Abra Goodwin" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#100
+<http://www.semanticweb.org/owl/owlapi/turtle#100> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#SPLN> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Tyler Bolton" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#101
+<http://www.semanticweb.org/owl/owlapi/turtle#101> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#SPLN> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Roary Conrad" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#102
+<http://www.semanticweb.org/owl/owlapi/turtle#102> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#AER> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Tatiana Puckett" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#103
+<http://www.semanticweb.org/owl/owlapi/turtle#103> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#SPLN> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Donovan Kinney" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#104
+<http://www.semanticweb.org/owl/owlapi/turtle#104> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#AER> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Russell Cameron" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#105
+<http://www.semanticweb.org/owl/owlapi/turtle#105> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#SPLN> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Vanna Mcdonald" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#106
+<http://www.semanticweb.org/owl/owlapi/turtle#106> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#AER> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Natalie Dunlap" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#107
+<http://www.semanticweb.org/owl/owlapi/turtle#107> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#PRC> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Xander Peck" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#108
+<http://www.semanticweb.org/owl/owlapi/turtle#108> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#AER> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Germaine Santiago" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#109
+<http://www.semanticweb.org/owl/owlapi/turtle#109> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#VR> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Charity Jacobs" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#11
+<http://www.semanticweb.org/owl/owlapi/turtle#11> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#VR> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Jesse Lindsay" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#110
+<http://www.semanticweb.org/owl/owlapi/turtle#110> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#VR> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Andrew Morrison" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#111
+<http://www.semanticweb.org/owl/owlapi/turtle#111> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#SPLN> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Bruno Dodson" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#112
+<http://www.semanticweb.org/owl/owlapi/turtle#112> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#PRC> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Amir Greer" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#113
+<http://www.semanticweb.org/owl/owlapi/turtle#113> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#PRC> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Candace Kaufman" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#114
+<http://www.semanticweb.org/owl/owlapi/turtle#114> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#PRC> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Castor Glass" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#115
+<http://www.semanticweb.org/owl/owlapi/turtle#115> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#SPLN> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Russell Yates" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#116
+<http://www.semanticweb.org/owl/owlapi/turtle#116> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#SPLN> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Anjolie Mcguire" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#117
+<http://www.semanticweb.org/owl/owlapi/turtle#117> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#VR> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Wyatt Gregory" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#118
+<http://www.semanticweb.org/owl/owlapi/turtle#118> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#SPLN> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Shafira Kim" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#119
+<http://www.semanticweb.org/owl/owlapi/turtle#119> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#PRC> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Jenette Short" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#12
+<http://www.semanticweb.org/owl/owlapi/turtle#12> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#PRC> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Tatum Andrews" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#120
+<http://www.semanticweb.org/owl/owlapi/turtle#120> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#SPLN> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Chase Lucas" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#121
+<http://www.semanticweb.org/owl/owlapi/turtle#121> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#VR> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Astra Reeves" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#122
+<http://www.semanticweb.org/owl/owlapi/turtle#122> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#AER> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Dara Yates" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#123
+<http://www.semanticweb.org/owl/owlapi/turtle#123> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#PRC> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Judah Butler" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#124
+<http://www.semanticweb.org/owl/owlapi/turtle#124> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#PRC> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Risa Dillard" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#125
+<http://www.semanticweb.org/owl/owlapi/turtle#125> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#SPLN> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Ali Williamson" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#126
+<http://www.semanticweb.org/owl/owlapi/turtle#126> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#VR> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "John Griffith" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#127
+<http://www.semanticweb.org/owl/owlapi/turtle#127> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#VR> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Dexter Duffy" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#128
+<http://www.semanticweb.org/owl/owlapi/turtle#128> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#AER> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Rama Swanson" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#129
+<http://www.semanticweb.org/owl/owlapi/turtle#129> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#PRC> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Judah Caldwell" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#13
+<http://www.semanticweb.org/owl/owlapi/turtle#13> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#SPLN> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Orli Santos" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#130
+<http://www.semanticweb.org/owl/owlapi/turtle#130> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#VR> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Samantha Mcgowan" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#131
+<http://www.semanticweb.org/owl/owlapi/turtle#131> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#VR> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Nigel Obrien" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#132
+<http://www.semanticweb.org/owl/owlapi/turtle#132> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#PRC> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Camilla Barron" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#133
+<http://www.semanticweb.org/owl/owlapi/turtle#133> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#AER> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Norman Hampton" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#134
+<http://www.semanticweb.org/owl/owlapi/turtle#134> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#PRC> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Wallace Sampson" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#135
+<http://www.semanticweb.org/owl/owlapi/turtle#135> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#SPLN> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Thor Hatfield" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#136
+<http://www.semanticweb.org/owl/owlapi/turtle#136> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#PRC> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Devin Mason" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#137
+<http://www.semanticweb.org/owl/owlapi/turtle#137> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#VR> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Harlan Matthews" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#138
+<http://www.semanticweb.org/owl/owlapi/turtle#138> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#SPLN> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Seth Kelley" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#139
+<http://www.semanticweb.org/owl/owlapi/turtle#139> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#SPLN> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Signe Humphrey" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#14
+<http://www.semanticweb.org/owl/owlapi/turtle#14> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#AER> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Yuli Suarez" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#140
+<http://www.semanticweb.org/owl/owlapi/turtle#140> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#AER> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Malcolm Gentry" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#141
+<http://www.semanticweb.org/owl/owlapi/turtle#141> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#PRC> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Chanda Bauer" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#142
+<http://www.semanticweb.org/owl/owlapi/turtle#142> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#AER> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Jessica Donaldson" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#143
+<http://www.semanticweb.org/owl/owlapi/turtle#143> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#AER> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Abraham Randall" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#144
+<http://www.semanticweb.org/owl/owlapi/turtle#144> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#SPLN> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Callum Justice" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#145
+<http://www.semanticweb.org/owl/owlapi/turtle#145> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#PRC> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Sylvia Ayers" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#146
+<http://www.semanticweb.org/owl/owlapi/turtle#146> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#AER> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Petra Montgomery" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#147
+<http://www.semanticweb.org/owl/owlapi/turtle#147> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#SPLN> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Ishmael Pollard" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#148
+<http://www.semanticweb.org/owl/owlapi/turtle#148> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#SPLN> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Stephen Monroe" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#149
+<http://www.semanticweb.org/owl/owlapi/turtle#149> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#PRC> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Ora Wilkins" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#15
+<http://www.semanticweb.org/owl/owlapi/turtle#15> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#SPLN> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Aileen Mcintosh" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#150
+<http://www.semanticweb.org/owl/owlapi/turtle#150> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#VR> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Jakeem Moreno" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#151
+<http://www.semanticweb.org/owl/owlapi/turtle#151> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#AER> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Beau Lowe" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#152
+<http://www.semanticweb.org/owl/owlapi/turtle#152> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#VR> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Kylee Boyle" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#153
+<http://www.semanticweb.org/owl/owlapi/turtle#153> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#AER> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Cora Fox" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#154
+<http://www.semanticweb.org/owl/owlapi/turtle#154> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#PRC> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Camille Galloway" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#155
+<http://www.semanticweb.org/owl/owlapi/turtle#155> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#VR> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Dillon Conner" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#156
+<http://www.semanticweb.org/owl/owlapi/turtle#156> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#PRC> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Mia Logan" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#157
+<http://www.semanticweb.org/owl/owlapi/turtle#157> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#VR> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Danielle Craig" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#158
+<http://www.semanticweb.org/owl/owlapi/turtle#158> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#AER> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Merritt Blankenship" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#159
+<http://www.semanticweb.org/owl/owlapi/turtle#159> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#SPLN> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Orla Meadows" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#16
+<http://www.semanticweb.org/owl/owlapi/turtle#16> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#AER> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Blossom Blackburn" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#160
+<http://www.semanticweb.org/owl/owlapi/turtle#160> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#VR> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Oliver Wheeler" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#161
+<http://www.semanticweb.org/owl/owlapi/turtle#161> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#SPLN> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Steven Barnett" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#162
+<http://www.semanticweb.org/owl/owlapi/turtle#162> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#PRC> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Chastity Mullins" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#163
+<http://www.semanticweb.org/owl/owlapi/turtle#163> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#PRC> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Timothy Mcdonald" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#164
+<http://www.semanticweb.org/owl/owlapi/turtle#164> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#VR> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Alma Jacobs" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#165
+<http://www.semanticweb.org/owl/owlapi/turtle#165> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#PRC> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Lillith Duncan" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#166
+<http://www.semanticweb.org/owl/owlapi/turtle#166> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#SPLN> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Zenaida Holden" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#167
+<http://www.semanticweb.org/owl/owlapi/turtle#167> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#AER> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Bruce Mcknight" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#168
+<http://www.semanticweb.org/owl/owlapi/turtle#168> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#AER> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Beck Carson" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#169
+<http://www.semanticweb.org/owl/owlapi/turtle#169> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#SPLN> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Jarrod Avila" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#17
+<http://www.semanticweb.org/owl/owlapi/turtle#17> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#AER> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Nina Stuart" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#170
+<http://www.semanticweb.org/owl/owlapi/turtle#170> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#AER> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Hedy Keith" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#171
+<http://www.semanticweb.org/owl/owlapi/turtle#171> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#AER> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Chase Fulton" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#172
+<http://www.semanticweb.org/owl/owlapi/turtle#172> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#VR> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Jasper Wyatt" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#173
+<http://www.semanticweb.org/owl/owlapi/turtle#173> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#VR> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Gareth Griffith" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#174
+<http://www.semanticweb.org/owl/owlapi/turtle#174> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#AER> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Jameson Rosa" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#175
+<http://www.semanticweb.org/owl/owlapi/turtle#175> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#VR> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Tiger Wheeler" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#176
+<http://www.semanticweb.org/owl/owlapi/turtle#176> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#AER> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Julie Fuller" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#177
+<http://www.semanticweb.org/owl/owlapi/turtle#177> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#VR> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Brady Bird" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#178
+<http://www.semanticweb.org/owl/owlapi/turtle#178> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#PRC> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "David Nicholson" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#179
+<http://www.semanticweb.org/owl/owlapi/turtle#179> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#AER> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Rama Melendez" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#18
+<http://www.semanticweb.org/owl/owlapi/turtle#18> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#AER> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Austin Herrera" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#180
+<http://www.semanticweb.org/owl/owlapi/turtle#180> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#AER> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Salvador Byers" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#181
+<http://www.semanticweb.org/owl/owlapi/turtle#181> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#AER> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Nyssa Langley" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#182
+<http://www.semanticweb.org/owl/owlapi/turtle#182> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#VR> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Teegan Henry" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#183
+<http://www.semanticweb.org/owl/owlapi/turtle#183> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#AER> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Vera Moss" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#184
+<http://www.semanticweb.org/owl/owlapi/turtle#184> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#PRC> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Martin House" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#185
+<http://www.semanticweb.org/owl/owlapi/turtle#185> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#VR> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Geraldine Fletcher" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#186
+<http://www.semanticweb.org/owl/owlapi/turtle#186> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#SPLN> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Jaquelyn Rasmussen" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#187
+<http://www.semanticweb.org/owl/owlapi/turtle#187> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#AER> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Xaviera Keller" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#188
+<http://www.semanticweb.org/owl/owlapi/turtle#188> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#AER> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Kyla Sargent" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#189
+<http://www.semanticweb.org/owl/owlapi/turtle#189> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#SPLN> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Marcia Ruiz" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#19
+<http://www.semanticweb.org/owl/owlapi/turtle#19> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#AER> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Rafael Bartlett" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#190
+<http://www.semanticweb.org/owl/owlapi/turtle#190> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#VR> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Keegan Poole" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#191
+<http://www.semanticweb.org/owl/owlapi/turtle#191> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#PRC> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Bevis Workman" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#192
+<http://www.semanticweb.org/owl/owlapi/turtle#192> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#SPLN> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Emi Chapman" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#193
+<http://www.semanticweb.org/owl/owlapi/turtle#193> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#PRC> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Shannon Bender" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#194
+<http://www.semanticweb.org/owl/owlapi/turtle#194> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#VR> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Basil Fisher" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#195
+<http://www.semanticweb.org/owl/owlapi/turtle#195> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#VR> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Jaime Oconnor" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#196
+<http://www.semanticweb.org/owl/owlapi/turtle#196> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#PRC> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Reed Roberson" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#197
+<http://www.semanticweb.org/owl/owlapi/turtle#197> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#SPLN> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Hilel Pope" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#198
+<http://www.semanticweb.org/owl/owlapi/turtle#198> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#VR> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Jin Hooper" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#199
+<http://www.semanticweb.org/owl/owlapi/turtle#199> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#SPLN> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Hunter Clay" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#2
+<http://www.semanticweb.org/owl/owlapi/turtle#2> rdf:type owl:NamedIndividual ,
+                                                          <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                 <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#VR> ;
+                                                 <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Branden Goodman" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#20
+<http://www.semanticweb.org/owl/owlapi/turtle#20> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#AER> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Moses Glenn" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#200
+<http://www.semanticweb.org/owl/owlapi/turtle#200> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#PRC> ;
+                                                   <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Kristen Bush" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#21
+<http://www.semanticweb.org/owl/owlapi/turtle#21> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#PRC> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Quinn Vaughan" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#22
+<http://www.semanticweb.org/owl/owlapi/turtle#22> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#SPLN> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Bianca Freeman" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#23
+<http://www.semanticweb.org/owl/owlapi/turtle#23> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#AER> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Ignacia Murray" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#24
+<http://www.semanticweb.org/owl/owlapi/turtle#24> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#SPLN> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Emerson Beasley" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#25
+<http://www.semanticweb.org/owl/owlapi/turtle#25> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#AER> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Larissa Valenzuela" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#26
+<http://www.semanticweb.org/owl/owlapi/turtle#26> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#AER> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Alexander Snider" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#27
+<http://www.semanticweb.org/owl/owlapi/turtle#27> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#PRC> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Kane Erickson" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#28
+<http://www.semanticweb.org/owl/owlapi/turtle#28> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#SPLN> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Liberty Watkins" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#29
+<http://www.semanticweb.org/owl/owlapi/turtle#29> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#VR> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Quon Mendoza" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#3
+<http://www.semanticweb.org/owl/owlapi/turtle#3> rdf:type owl:NamedIndividual ,
+                                                          <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                 <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#PRC> ;
+                                                 <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Demetrius Rojas" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#30
+<http://www.semanticweb.org/owl/owlapi/turtle#30> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#SPLN> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Arthur Walton" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#31
+<http://www.semanticweb.org/owl/owlapi/turtle#31> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#PRC> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Macy Wolf" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#32
+<http://www.semanticweb.org/owl/owlapi/turtle#32> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#AER> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Kuame Hoffman" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#33
+<http://www.semanticweb.org/owl/owlapi/turtle#33> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#VR> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Zoe Warren" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#34
+<http://www.semanticweb.org/owl/owlapi/turtle#34> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#SPLN> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Griffin Tyson" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#35
+<http://www.semanticweb.org/owl/owlapi/turtle#35> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#SPLN> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Shelly Yang" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#36
+<http://www.semanticweb.org/owl/owlapi/turtle#36> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#AER> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Ray Lara" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#37
+<http://www.semanticweb.org/owl/owlapi/turtle#37> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#PRC> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Alexander Diaz" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#38
+<http://www.semanticweb.org/owl/owlapi/turtle#38> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#PRC> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Warren Buck" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#39
+<http://www.semanticweb.org/owl/owlapi/turtle#39> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#AER> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Garrison Rodgers" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#4
+<http://www.semanticweb.org/owl/owlapi/turtle#4> rdf:type owl:NamedIndividual ,
+                                                          <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                 <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#PRC> ;
+                                                 <http://www.semanticweb.org/owl/owlapi/turtle#nome> "George Woodard" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#40
+<http://www.semanticweb.org/owl/owlapi/turtle#40> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#SPLN> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Mohammad Beck" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#41
+<http://www.semanticweb.org/owl/owlapi/turtle#41> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#AER> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Tiger Jones" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#42
+<http://www.semanticweb.org/owl/owlapi/turtle#42> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#SPLN> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Mara Lancaster" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#43
+<http://www.semanticweb.org/owl/owlapi/turtle#43> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#SPLN> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Bree Copeland" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#44
+<http://www.semanticweb.org/owl/owlapi/turtle#44> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#AER> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Connor Osborn" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#45
+<http://www.semanticweb.org/owl/owlapi/turtle#45> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#AER> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Dacey Beach" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#46
+<http://www.semanticweb.org/owl/owlapi/turtle#46> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#PRC> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Rama Mcmillan" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#47
+<http://www.semanticweb.org/owl/owlapi/turtle#47> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#PRC> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Macey Prince" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#48
+<http://www.semanticweb.org/owl/owlapi/turtle#48> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#SPLN> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Chiquita Jacobs" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#49
+<http://www.semanticweb.org/owl/owlapi/turtle#49> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#AER> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Brody Matthews" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#5
+<http://www.semanticweb.org/owl/owlapi/turtle#5> rdf:type owl:NamedIndividual ,
+                                                          <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                 <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#AER> ;
+                                                 <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Shad Harmon" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#50
+<http://www.semanticweb.org/owl/owlapi/turtle#50> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#AER> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Xena Dorsey" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#51
+<http://www.semanticweb.org/owl/owlapi/turtle#51> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#VR> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Jasmine Short" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/owl/owlapi/turtle#51> ;
+   owl:annotatedProperty <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> ;
+   owl:annotatedTarget <http://www.semanticweb.org/owl/owlapi/turtle#VR> ;
+   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> ""
+ ] .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#52
+<http://www.semanticweb.org/owl/owlapi/turtle#52> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#VR> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Anne Bentley" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#53
+<http://www.semanticweb.org/owl/owlapi/turtle#53> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#SPLN> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Mara Cervantes" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/owl/owlapi/turtle#53> ;
+   owl:annotatedProperty <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> ;
+   owl:annotatedTarget <http://www.semanticweb.org/owl/owlapi/turtle#SPLN> ;
+   <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> ""
+ ] .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#54
+<http://www.semanticweb.org/owl/owlapi/turtle#54> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#PRC> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Audra Schwartz" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#55
+<http://www.semanticweb.org/owl/owlapi/turtle#55> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#SPLN> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Carlos Garner" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#56
+<http://www.semanticweb.org/owl/owlapi/turtle#56> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#PRC> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Olga Blackburn" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#57
+<http://www.semanticweb.org/owl/owlapi/turtle#57> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#AER> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Quincy Arnold" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#58
+<http://www.semanticweb.org/owl/owlapi/turtle#58> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#SPLN> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Abra Cotton" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#59
+<http://www.semanticweb.org/owl/owlapi/turtle#59> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#SPLN> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Garrison David" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#6
+<http://www.semanticweb.org/owl/owlapi/turtle#6> rdf:type owl:NamedIndividual ,
+                                                          <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                 <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#SPLN> ;
+                                                 <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Hamish Wilder" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#60
+<http://www.semanticweb.org/owl/owlapi/turtle#60> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#SPLN> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Nathan Gibbs" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#61
+<http://www.semanticweb.org/owl/owlapi/turtle#61> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#AER> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Martin Ferguson" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#62
+<http://www.semanticweb.org/owl/owlapi/turtle#62> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#AER> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Ori Castaneda" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#63
+<http://www.semanticweb.org/owl/owlapi/turtle#63> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#VR> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Rhonda Knapp" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#64
+<http://www.semanticweb.org/owl/owlapi/turtle#64> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#AER> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Kameko Melendez" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#65
+<http://www.semanticweb.org/owl/owlapi/turtle#65> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#VR> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Nita Mann" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#66
+<http://www.semanticweb.org/owl/owlapi/turtle#66> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#AER> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Kyla Welch" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#67
+<http://www.semanticweb.org/owl/owlapi/turtle#67> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#SPLN> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Jameson Curtis" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#68
+<http://www.semanticweb.org/owl/owlapi/turtle#68> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#SPLN> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Bell Bolton" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#69
+<http://www.semanticweb.org/owl/owlapi/turtle#69> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#AER> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Claudia Ayala" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#7
+<http://www.semanticweb.org/owl/owlapi/turtle#7> rdf:type owl:NamedIndividual ,
+                                                          <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                 <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#AER> ;
+                                                 <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Jason Burgess" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#70
+<http://www.semanticweb.org/owl/owlapi/turtle#70> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#VR> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Ursa Hess" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#71
+<http://www.semanticweb.org/owl/owlapi/turtle#71> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#AER> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Brody Hoover" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#72
+<http://www.semanticweb.org/owl/owlapi/turtle#72> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#SPLN> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Ashton Huff" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#73
+<http://www.semanticweb.org/owl/owlapi/turtle#73> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#VR> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Ferdinand Downs" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#74
+<http://www.semanticweb.org/owl/owlapi/turtle#74> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#SPLN> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Penelope Welch" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#75
+<http://www.semanticweb.org/owl/owlapi/turtle#75> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#SPLN> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Heidi Calderon" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#76
+<http://www.semanticweb.org/owl/owlapi/turtle#76> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#AER> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Fitzgerald Castro" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#77
+<http://www.semanticweb.org/owl/owlapi/turtle#77> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#PRC> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Whilemina Young" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#78
+<http://www.semanticweb.org/owl/owlapi/turtle#78> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#PRC> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Rana Holden" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#79
+<http://www.semanticweb.org/owl/owlapi/turtle#79> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#VR> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Danielle Olsen" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#8
+<http://www.semanticweb.org/owl/owlapi/turtle#8> rdf:type owl:NamedIndividual ,
+                                                          <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                 <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#AER> ;
+                                                 <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Noelani Brennan" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#80
+<http://www.semanticweb.org/owl/owlapi/turtle#80> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#SPLN> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Axel Snow" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#81
+<http://www.semanticweb.org/owl/owlapi/turtle#81> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#PRC> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Emery Herring" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#82
+<http://www.semanticweb.org/owl/owlapi/turtle#82> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#AER> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Keaton Knapp" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#83
+<http://www.semanticweb.org/owl/owlapi/turtle#83> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#PRC> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Chastity Chan" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#84
+<http://www.semanticweb.org/owl/owlapi/turtle#84> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#PRC> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Cyrus Simmons" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#85
+<http://www.semanticweb.org/owl/owlapi/turtle#85> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#PRC> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Amaya Nelson" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#86
+<http://www.semanticweb.org/owl/owlapi/turtle#86> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#PRC> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "May Hernandez" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#87
+<http://www.semanticweb.org/owl/owlapi/turtle#87> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#VR> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Kadeem Duran" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#88
+<http://www.semanticweb.org/owl/owlapi/turtle#88> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#VR> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Amelia Norman" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#89
+<http://www.semanticweb.org/owl/owlapi/turtle#89> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#AER> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Lael Summers" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#9
+<http://www.semanticweb.org/owl/owlapi/turtle#9> rdf:type owl:NamedIndividual ,
+                                                          <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                 <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#PRC> ;
+                                                 <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Lance Kelley" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#90
+<http://www.semanticweb.org/owl/owlapi/turtle#90> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#VR> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Erich Christian" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#91
+<http://www.semanticweb.org/owl/owlapi/turtle#91> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#PRC> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Colleen Beck" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#92
+<http://www.semanticweb.org/owl/owlapi/turtle#92> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#SPLN> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Paul Langley" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#93
+<http://www.semanticweb.org/owl/owlapi/turtle#93> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#VR> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Walter Tillman" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#94
+<http://www.semanticweb.org/owl/owlapi/turtle#94> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#SPLN> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Ria Oneil" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#95
+<http://www.semanticweb.org/owl/owlapi/turtle#95> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#PRC> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Mona Payne" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#96
+<http://www.semanticweb.org/owl/owlapi/turtle#96> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#VR> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Rylee Huber" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#97
+<http://www.semanticweb.org/owl/owlapi/turtle#97> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#PRC> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Karina Oconnor" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#98
+<http://www.semanticweb.org/owl/owlapi/turtle#98> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#SPLN> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Walker Soto" .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#99
+<http://www.semanticweb.org/owl/owlapi/turtle#99> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Aluno> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#frequenta> <http://www.semanticweb.org/owl/owlapi/turtle#SPLN> ;
+                                                  <http://www.semanticweb.org/owl/owlapi/turtle#nome> "Inez Mccarthy" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
