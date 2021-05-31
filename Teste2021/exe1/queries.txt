@@ -1,0 +1,66 @@
+1)Quantos exames estão registados?
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX : <http://www.semanticweb.org/mark_/ontologies/2021/4/EMD#>
+select (count (?s) as ?total) where { 
+	?s rdf:type :EMD .
+}
+2)Quantos exames tiveram um resultado válido?
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX : <http://www.semanticweb.org/mark_/ontologies/2021/4/EMD#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+select (count (?s) as ?total) where { 
+	?s rdf:type :EMD ;
+       :Resultado "true"^^xsd:boolean .
+}
+3)Qual a distribuição dos exames por género?
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX : <http://www.semanticweb.org/mark_/ontologies/2021/4/EMD#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+select ?g (count (?s) as ?total) where { 
+	?s rdf:type :EMD ;
+       :feitoPor ?a.
+    
+    ?a :Genero  ?g .
+}
+group by ?g 
+4)Qual a distribuição dos exames por modalidade?
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX : <http://www.semanticweb.org/mark_/ontologies/2021/4/EMD#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+select ?mod (count (?s) as ?total) where { 
+	?s rdf:type :EMD ;
+       :feitoPor ?a.
+    
+    ?a rdf:type :Atleta ;
+       :temModalidade ?mod .
+}
+group by ?mod
+
+5)Quantos atletas federados do "GDGoma" fizeram EMD?
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX : <http://www.semanticweb.org/mark_/ontologies/2021/4/EMD#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+select (count (?s) as ?total) where { 
+	?s rdf:type :EMD ;
+       :feitoPor ?a.
+    
+    ?a rdf:type :Atleta ;
+       :temClube :GDGoma ;
+       :Federado "true"^^xsd:boolean .
+}
+6)Quantos atletas do género feminino que praticam Triatlo fizeram EMD?
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX : <http://www.semanticweb.org/mark_/ontologies/2021/4/EMD#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+select (count (?s) as ?total) where { 
+	?s rdf:type :EMD ;
+       :feitoPor ?a.
+    
+    ?a rdf:type :Atleta ;
+       :temModalidade :Triatlo ;
+    	:Genero "F" .
+}
