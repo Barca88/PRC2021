@@ -1,0 +1,149 @@
+@prefix : <http://www.semanticweb.org/mark_/ontologies/2021/4/EMD-11#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/mark_/ontologies/2021/4/EMD-11> .
+
+<http://www.semanticweb.org/mark_/ontologies/2021/4/EMD-11> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#feitoPor
+<http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#feitoPor> rdf:type owl:ObjectProperty ;
+                                                                                   owl:inverseOf <http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#fezEMD> .
+
+
+###  http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#fezEMD
+<http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#fezEMD> rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#mTemAtleta
+<http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#mTemAtleta> rdf:type owl:ObjectProperty ;
+                                                                                     owl:inverseOf <http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#temModalidade> .
+
+
+###  http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#temAtleta
+<http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#temAtleta> rdf:type owl:ObjectProperty ;
+                                                                                    owl:inverseOf <http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#temClube> .
+
+
+###  http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#temClube
+<http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#temClube> rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#temModalidade
+<http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#temModalidade> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#Data
+<http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#Data> rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#Federado
+<http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#Federado> rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#Genero
+<http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#Genero> rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#Idade
+<http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#Idade> rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#Index
+<http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#Index> rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#Morada
+<http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#Morada> rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#Nome
+<http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#Nome> rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#Primeiro
+<http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#Primeiro> rdf:type owl:DatatypeProperty ;
+                                                                                   rdfs:subPropertyOf <http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#Nome> .
+
+
+###  http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#Resultado
+<http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#Resultado> rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#Ultimo
+<http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#Ultimo> rdf:type owl:DatatypeProperty ;
+                                                                                 rdfs:subPropertyOf <http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#Nome> .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#Atleta
+<http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#Atleta> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#Clube
+<http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#Clube> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#EMD
+<http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#EMD> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#Modalidade
+<http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#Modalidade> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#BTT
+<http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#BTT> rdf:type owl:NamedIndividual ,
+                                                                                       <http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#Modalidade> ;
+                                                                              <http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#mTemAtleta> <http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#mosley.gonzales@scbraga.ca> .
+
+
+###  http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#SCBraga
+<http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#SCBraga> rdf:type owl:NamedIndividual ,
+                                                                                           <http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#Clube> ;
+                                                                                  <http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#temAtleta> <http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#mosley.gonzales@scbraga.ca> .
+
+
+###  http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#60b3eeb9354e8a0e1817c201
+<http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#60b3eeb9354e8a0e1817c201> rdf:type owl:NamedIndividual ,
+                                                                                                            <http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#EMD> ;
+                                                                                                   <http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#feitoPor> <http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#mosley.gonzales@scbraga.ca> ;
+                                                                                                   <http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#Data> "2020-09-26" ;
+                                                                                                   <http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#Index> 61 ;
+                                                                                                   <http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#Resultado> "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#mosley.gonzales@scbraga.ca
+<http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#mosley.gonzales@scbraga.ca> rdf:type owl:NamedIndividual ,
+                                                                                                              <http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#Atleta> ;
+                                                                                                     <http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#fezEMD> <http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#60b3eeb9354e8a0e1817c201> ;
+                                                                                                     <http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#temClube> <http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#SCBraga> ;
+                                                                                                     <http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#temModalidade> <http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#BTT> ;
+                                                                                                     <http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#Federado> "true"^^xsd:boolean ;
+                                                                                                     <http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#Genero> "M" ;
+                                                                                                     <http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#Idade> 26 ;
+                                                                                                     <http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#Morada> "Driftwood dois 3" ;
+                                                                                                     <http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#Nome> "Gonzales" ,
+                                                                                                                                                                                    "Mosley" ;
+                                                                                                     <http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#Primeiro> "Mosley" ;
+                                                                                                     <http://www.semanticweb.org/mark_/ontologies/2021/4/untitled-ontology-10#Ultimo> "Gonzales" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

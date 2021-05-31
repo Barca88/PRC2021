@@ -1,0 +1,149 @@
+@prefix : <http://www.semanticweb.org/mark_/ontologies/2021/4/EMD#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/mark_/ontologies/2021/4/EMD> .
+
+<http://www.semanticweb.org/mark_/ontologies/2021/4/EMD> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/mark_/ontologies/2021/4/EMD#feitoPor
+:feitoPor rdf:type owl:ObjectProperty ;
+          owl:inverseOf :fezEMD .
+
+
+###  http://www.semanticweb.org/mark_/ontologies/2021/4/EMD#fezEMD
+:fezEMD rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/mark_/ontologies/2021/4/EMD#mTemAtleta
+:mTemAtleta rdf:type owl:ObjectProperty ;
+            owl:inverseOf :temModalidade .
+
+
+###  http://www.semanticweb.org/mark_/ontologies/2021/4/EMD#temAtleta
+:temAtleta rdf:type owl:ObjectProperty ;
+           owl:inverseOf :temClube .
+
+
+###  http://www.semanticweb.org/mark_/ontologies/2021/4/EMD#temClube
+:temClube rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/mark_/ontologies/2021/4/EMD#temModalidade
+:temModalidade rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/mark_/ontologies/2021/4/EMD#Data
+:Data rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/mark_/ontologies/2021/4/EMD#Federado
+:Federado rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/mark_/ontologies/2021/4/EMD#Genero
+:Genero rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/mark_/ontologies/2021/4/EMD#Idade
+:Idade rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/mark_/ontologies/2021/4/EMD#Index
+:Index rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/mark_/ontologies/2021/4/EMD#Morada
+:Morada rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/mark_/ontologies/2021/4/EMD#Nome
+:Nome rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/mark_/ontologies/2021/4/EMD#Primeiro
+:Primeiro rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf :Nome .
+
+
+###  http://www.semanticweb.org/mark_/ontologies/2021/4/EMD#Resultado
+:Resultado rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/mark_/ontologies/2021/4/EMD#Ultimo
+:Ultimo rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf :Nome .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/mark_/ontologies/2021/4/EMD#Atleta
+:Atleta rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/mark_/ontologies/2021/4/EMD#Clube
+:Clube rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/mark_/ontologies/2021/4/EMD#EMD
+:EMD rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/mark_/ontologies/2021/4/EMD#Modalidade
+:Modalidade rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/mark_/ontologies/2021/4/EMD#BTT
+:BTT rdf:type owl:NamedIndividual ,
+              :Modalidade ;
+     :mTemAtleta <http://www.semanticweb.org/mark_/ontologies/2021/4/EMD#mosley.gonzales@scbraga.ca> .
+
+
+###  http://www.semanticweb.org/mark_/ontologies/2021/4/EMD#SCBraga
+:SCBraga rdf:type owl:NamedIndividual ,
+                  :Clube ;
+         :temAtleta <http://www.semanticweb.org/mark_/ontologies/2021/4/EMD#mosley.gonzales@scbraga.ca> .
+
+
+###  http://www.semanticweb.org/mark_/ontologies/2021/4/EMD#60b3eeb9354e8a0e1817c201
+<http://www.semanticweb.org/mark_/ontologies/2021/4/EMD#60b3eeb9354e8a0e1817c201> rdf:type owl:NamedIndividual ,
+                                                                                           :EMD ;
+                                                                                  :feitoPor <http://www.semanticweb.org/mark_/ontologies/2021/4/EMD#mosley.gonzales@scbraga.ca> ;
+                                                                                  :Data "2020-09-26" ;
+                                                                                  :Index 61 ;
+                                                                                  :Resultado "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/mark_/ontologies/2021/4/EMD#mosley.gonzales@scbraga.ca
+<http://www.semanticweb.org/mark_/ontologies/2021/4/EMD#mosley.gonzales@scbraga.ca> rdf:type owl:NamedIndividual ,
+                                                                                             :Atleta ;
+                                                                                    :fezEMD <http://www.semanticweb.org/mark_/ontologies/2021/4/EMD#60b3eeb9354e8a0e1817c201> ;
+                                                                                    :temClube :SCBraga ;
+                                                                                    :temModalidade :BTT ;
+                                                                                    :Federado "true"^^xsd:boolean ;
+                                                                                    :Genero "M" ;
+                                                                                    :Idade 26 ;
+                                                                                    :Morada "Driftwood dois 3" ;
+                                                                                    :Nome "Gonzales" ,
+                                                                                          "Mosley" ;
+                                                                                    :Primeiro "Mosley" ;
+                                                                                    :Ultimo "Gonzales" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
