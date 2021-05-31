@@ -13,6 +13,7 @@ router.get('/emd', function(req, res, next) {
         })
         .catch(error => {
             console.log('Erro /emd?res=OK \n'+ error)
+            res.send(error)
         })
     } else {
         q = `
@@ -30,6 +31,7 @@ router.get('/emd', function(req, res, next) {
         })
         .catch(error => {
             console.log('Erro /emd/ \n'+ error)
+            res.send(error)
         })
     }
 });
@@ -51,6 +53,7 @@ router.get('/emd/:id', function(req, res, next) {
     })
     .catch(error => {
         console.log(`Erro /emd/${req.params.id} \n`+ error)
+        res.send(error)
     })
 }
 );
@@ -63,6 +66,7 @@ router.get('/modalidades ', function(req, res, next) {
     })
     .catch(error => {
         console.log('Erro /modalidades \n'+ error)
+        res.send(error)
     })
 }
 );
@@ -80,6 +84,7 @@ router.get('/modalidades/:id', function(req, res, next) {
     })
     .catch(error => {
         console.log(`Erro /modalidades/${req.params.id} \n`+ error)
+        res.send(error)
     })
 }
 );
@@ -99,6 +104,7 @@ router.get('/atletas', function(req, res, next) {
         })
         .catch(error => {
             console.log(`Erro /atletas?gen=${req.query.gen} \n`+ error)
+            res.send(error)
         })
     } else if(req.query.clube){
         q = `
@@ -114,6 +120,7 @@ router.get('/atletas', function(req, res, next) {
         })
         .catch(error => {
             console.log(`Erro /atletas?gen=${req.query.clube} \n`+ error)
+            res.send(error)
         })
     }
 }
