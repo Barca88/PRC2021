@@ -17,7 +17,7 @@ def main() -> ():
             out.write(f':{cidade["id"]} rdf:type owl:NamedIndividual ,\n')
             out.write(f'\t\t\t\t:Cidade ;\n')
             out.write(f'\t\t\t:descrição \"{cidade["descrição"]}\" ;\n')
-            out.write(f'\t\t\t:destrito \"{cidade["destrito"]}\" ;\n')
+            out.write(f'\t\t\t:destrito \"{cidade["distrito"]}\" ;\n')
             out.write(f'\t\t\t:nome \"{cidade["nome"]}\" ;\n')
             out.write(f'\t\t\t:população {cidade["população"]} .\n\n')
 
@@ -25,9 +25,9 @@ def main() -> ():
             out.write(f'###  http://www.semanticweb.org/_mark/ontologies/tpc7#{ligacao["id"]}\n')
             out.write(f':{ligacao["id"]} rdf:type owl:NamedIndividual ,\n')
             out.write(f'\t\t\t\t:Ligação ;\n')
-            out.write(f'\t\t\t:temDestino :{ligacao["descrição"]} ;\n')
-            out.write(f'\t\t\t:temOrigem :{ligacao["destrito"]} ;\n')
-            out.write(f'\t\t\t:distancia {ligacao["nome"]} .\n\n')
+            out.write(f'\t\t\t:temDestino :{ligacao["destino"]} ;\n')
+            out.write(f'\t\t\t:temOrigem :{ligacao["origem"]} ;\n')
+            out.write(f'\t\t\t:distancia {ligacao["distância"]} .\n\n')
 
 if __name__ == "__main__":
     main()
